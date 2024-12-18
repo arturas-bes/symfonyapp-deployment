@@ -10,7 +10,7 @@ spec:
   project: cluster-apps
 
   source:
-    repoURL: https://github.com/arturas-bes/symfony-service-deployment.git
+    repoURL: https://github.com/arturas-bes/symfonyapp-deployment.git
     targetRevision: HEAD
     path: dev
   destination:
