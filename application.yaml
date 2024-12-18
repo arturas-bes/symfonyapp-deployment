@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/part-of: symfonyapp-root
     app.kubernetes.io/application: symfonyapp-root
 spec:
-  project: cluster-apps
+  project: default
 
   source:
     repoURL: https://github.com/arturas-bes/symfonyapp-deployment.git
