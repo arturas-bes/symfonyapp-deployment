@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: symfonyapp
+spec:
+  selector:
+    matchLabels:
+      app: symfonyapp
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: symfonyapp
+    spec:
+      containers:
+        - name: symfonyapp
+          image: nachaliuga/symfony-service:latest
+          ports:
+            - containerPort: 8080
+

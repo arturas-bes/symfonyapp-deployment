@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-symfonyapp
+  namespace: argocd
+  labels:
+    app.kubernetes.io/part-of: symfonyapp-root
+    app.kubernetes.io/application: symfonyapp-root
+spec:
+  project: cluster-apps
+
+  source:
+    repoURL: https://github.com/arturas-bes/symfony-service-deployment.git
+    targetRevision: HEAD
+    path: dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
