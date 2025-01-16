@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: symfonyapp
-          image: nachaliuga/symfony-service:latest
+          image: nachaliuga/go-hello-world:v1.0
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
 
